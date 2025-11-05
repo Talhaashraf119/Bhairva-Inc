@@ -1,0 +1,436 @@
+/* ==========================
+   ABOUT SECTION (Professional Look)
+   ========================== */
+.about-section {
+  position: relative;
+  background: url("/images/brick-image.png") center/cover no-repeat;
+  color: #fff;
+  padding: 0 15px;
+  text-align: center;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  margin-top: 120px;
+  padding-top: 20px;
+}
+
+/* 🔥 Shadow at the TOP instead of bottom */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%; /* how much of the top is covered */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  pointer-events: none;
+  z-index: 1;
+}
+.about-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%; /* how much of the bottom is covered */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+section {
+  background-color: #000000;
+  color: #fff;
+  padding: 0 15px; /* ✅ Removed top/bottom padding */
+  text-align: center;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  margin-top: 100px;
+  padding-top: 20px; /* ✅ No margin between sections */
+}
+
+section div {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px; /* ✅ Removed top/bottom padding */
+  animation: fadeInUp 1s ease both;
+}
+
+/* ---------- HEADING ---------- */
+section h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 20px 0; /* ✅ Removed top margin */
+  letter-spacing: 1px;
+  color: orange;
+  text-transform: uppercase;
+}
+
+/* ---------- PARAGRAPH ---------- */
+section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom:30px ;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+@media (max-width: 992px) {
+  section {
+    padding: 0 15px;
+  }
+
+  section h1 {
+    font-size: 48px;
+  }
+
+  section p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 0 15px;
+  }
+
+  section h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  section p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 0 10px;
+  }
+
+  section h1 {
+    font-size: 28px;
+  }
+
+  section p {
+    font-size: 15px;
+    text-align: left;
+  }
+}
+
+/* ==========================
+   BEAUTY SECTION
+   ========================== */
+.beauty-section {
+  background-color: #000000;
+  color: #fff;
+  position: relative;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  padding: 0; /* ✅ Removed vertical space */
+  margin: 0;
+}
+
+.beauty-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.beauty-text {
+  min-width: 320px;
+  margin: 0;
+}
+
+.brand-label {
+  color: #ff7e00;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.beauty-text h2 {
+  font-size: 29px;
+  font-weight: 1000;
+  margin: 0 0 10px 0;
+}
+
+.beauty-text p {
+  font-size: 17px;
+  color: #ddd;
+  max-width: 550px;
+  text-align: left;
+  margin: 0;
+}
+
+.beauty-text p strong {
+  display: block;
+  color: #ff7e00;
+}
+
+.contact-btn {
+  display: inline-block;
+  background: linear-gradient(to right, #ff7e00, #ff4747);
+  color: #fff;
+  padding: 12px 35px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(to right, #ff4747, #ff7e00);
+  transform: scale(1.05);
+}
+
+.beauty-images .main-image {
+  width: 100%;
+  max-width: 470px;
+  opacity: 0.95;
+}
+
+.beauty-quote-card {
+  position: relative;
+  right:-400px;
+  bottom: 120px;
+  background-color: #174451;
+  padding: 25px 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 39%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  margin: 0;
+}
+
+.beauty-quote-card .quote {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.beauty-quote-card .author {
+  font-size: 14px;
+  color: #ccc;
+}
+
+@media (max-width: 1024px) {
+  .beauty-section {
+    padding: 0;
+  }
+  .beauty-quote-card {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .beauty-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .beauty-section {
+    padding: 0;
+  }
+
+  .beauty-text {
+    text-align: center;
+  }
+
+  .beauty-text h2 {
+    font-size: 28px;
+  }
+
+  .beauty-text p {
+    font-size: 15px;
+  }
+
+  .contact-btn {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+
+  .beauty-quote-card {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .beauty-section {
+    padding: 0;
+  }
+
+  .beauty-text h2 {
+    font-size: 24px;
+  }
+
+  .beauty-text p {
+    font-size: 14px;
+  }
+
+  .main-image {
+    width: 260px;
+  }
+
+  .beauty-quote-card {
+    display: none;
+  }
+}
+
+/* ==========================
+   COMMITMENT SECTION
+   ========================== */
+.commitment-section {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  padding: 0; /* ✅ Removed space */
+  margin: 0;
+}
+
+.commitment-section h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: orange;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 20px 0;
+}
+
+.commitment-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.commitment-card {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  flex: 1 1 300px;
+  max-width: 360px;
+  box-shadow: 0 9px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  margin: 0;
+  padding-top: 15px;
+}
+
+.commitment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 12px 12px 20px rgba(255, 126, 0, 0.3);
+}
+
+.commitment-card h3 {
+  font-size: 22px;
+  color: #ff7e00;
+  margin-bottom: 10px;
+}
+
+.commitment-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ddd;
+  text-align: left;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .commitment-section {
+    padding: 0;
+  }
+
+  .commitment-section h2 {
+    font-size: 40px;
+  }
+
+  .commitment-container {
+    gap: 30px;
+  }
+
+  .commitment-card {
+    flex: 1 1 45%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .commitment-section {
+    padding: 0;
+  }
+
+  .commitment-section h2 {
+    font-size: 34px;
+  }
+
+  .commitment-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .commitment-card {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+  }
+
+  .commitment-card h3 {
+    font-size: 20px;
+  }
+
+  .commitment-card p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .commitment-section {
+    padding: 0;
+  }
+
+  .commitment-section h2 {
+    font-size: 28px;
+  }
+
+  .commitment-card {
+    padding: 20px;
+  }
+
+  .commitment-card h3 {
+    font-size: 18px;
+  }
+
+  .commitment-card p {
+    font-size: 14px;
+  }
+}

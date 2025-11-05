@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhairva Inc</title>
+  <link rel="stylesheet" href="/Css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="/images/logo.png" alt="SKC Brands Logo" />
+      </div>
+      <nav>
+        <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+          &#9776;
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/index.html" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="/product.html" class="dropbtn">Products ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="/product.html?category=Beauty Products">Beauty Products</a></li>
+              <hr>
+              <li><a href="/product.html?category=Health & Household">Health & Households</a></li>
+              <hr>
+              <li><a href="/product.html?category=Marine Supplies">Marine Supplies</a></li>
+              <hr>
+              <li><a href="/product.html?category=Other Products">Other Products</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart">
+        <span class="cart-total">$0.00</span>
+        <div class="cart-icon" id="cartIcon">🛒<sup id="cart-count">0</sup></div>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>BEAUTY,<br />REDEFINED<br />NATURALLY</h1>
+        <p style="font-size: larger;">
+          Elevate your skincare routine with premium products designed for a
+          confident, glowing complexion. Discover your natural beauty.
+        </p>
+        <a href="/product.html" class="btn">See All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beauty Section -->
+  <section class="beauty-section">
+    <div class="beauty-container">
+      <!-- Left Content -->
+      <div class="beauty-text">
+        <h4 class="brand-label">Bhairva Inc
+        </h4>
+        <h2>Transform Your Beauty Routine</h2>
+        <p>
+          Discover our carefully curated selection of beauty products designed to elevate your skincare
+          and makeup regimen. From nourishing creams to stunning cosmetics, we have everything you need
+          to look and feel your best.
+        </p>
+
+        <!-- Image 2 (Under text) -->
+        <div class="text-image-container">
+          <img src="images/left-pic.jpg" alt="Cosmetics Flatlay" class="bottom-image">
+
+          <!-- Quote Card Overlay -->
+          <div class="beauty-card">
+            <p class="quote">“Beauty begins the moment you decide to be yourself.”</p>
+            <span class="author">– Coco Chanel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="beauty-images">
+        <img src="images/right-pic2.png" alt="Skincare Woman" class="main-image">
+      </div>
+    </div>
+  </section>
+  <section class="pet-section">
+    <div class="overlay"></div>
+
+    <div class="pet-container">
+      <!-- Left Triangle Stats -->
+      <div class="pet-stats">
+        <div class="stat triangle">
+          <div class="stat-content">
+            <h2>99+</h2>
+            <p>Pre-Made Flavors</p>
+          </div>
+        </div>
+        <div class="stat triangle">
+          <div class="stat-content">
+            <h2>850+</h2>
+            <p>Happy Customers</p>
+          </div>
+        </div>
+        <div class="stat triangle">
+          <div class="stat-content">
+            <h2>120</h2>
+            <p>Gift Collections</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Text Content -->
+      <div class="pet-text">
+        <h4 class="section-label">PET SUPPLIES</h4>
+        <h2>Pamper Your Pets with Premium Products</h2>
+        <p>
+          Explore our extensive collection of pet supplies, from nutritious food to cozy beds and fun toys. Every
+          product is carefully selected to ensure the happiness and well-being of your furry friends. Shop with
+          confidence knowing you’re giving your pets the best.
+        </p>
+
+        <h3>Comfort and Play</h3>
+        <p>
+          Discover a range of comfortable beds and engaging toys designed to keep your pets cozy and entertained all day
+          long.
+        </p>
+
+        <h3>Nourish with the Best</h3>
+        <p>
+          Choose from a wide variety of high-quality pet foods that cater to all dietary needs, ensuring your pets stay
+          healthy and satisfied.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="quality-section">
+    <div class="content">
+      <div class="text-side">
+        <span class="category">BEAUTY</span>
+        <h1>We are committed to the best quality</h1>
+        <p>Committed to delivering the finest quality beauty products for your radiant look.</p>
+      </div>
+
+      <div class="image-side">
+        <img src="images/lotions.png" alt="Serie Expert Products" class="floating-img" />
+      </div>
+
+      <div class="stats-side">
+        <div class="stat">
+          <div class="label">
+            <h3>Deep Hydration</h3><span>97%</span>
+          </div>
+          <div class="bar">
+            <div class="fill" data-percentage="97"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="label">
+            <h3>Flawless Coverage</h3><span>80%</span>
+          </div>
+          <div class="bar">
+            <div class="fill" data-percentage="80"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="label">
+            <h3>All-Day Wear</h3><span>85%</span>
+          </div>
+          <div class="bar">
+            <div class="fill" data-percentage="85"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="label">
+            <h3>Seamless Blendability</h3><span>90%</span>
+          </div>
+          <div class="bar">
+            <div class="fill" data-percentage="90"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr style="
+  width: 90%;
+  margin: 60px auto;
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(250, 249, 246, 0.9),
+    transparent
+  );
+  border-radius: 50px;
+  opacity: 0.8;
+">
+  <section class="product-section">
+    <div class="product-card">
+      <img src="images/cart3.jpg" alt="Versace Yellow Diamond">
+      <h3 class="product-name">Versace Yellow Diamond Eau De Toilette Spray 1 oz for Women</h3>
+      <p class="price">$31.00</p>
+      <button class="add-btn">Add to cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/cart2.jpg" alt="CANMAKE Tokyo Mermaid Skin Gel Sunscreen">
+      <h3 class="product-name">CANMAKE Tokyo Mermaid Skin Gel Sunscreen</h3>
+      <p class="price orange">$30.00</p>
+      <button class="add-btn">Add to cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/cart1.jpg" alt="COVERGIRL Simply Ageless">
+      <h3 class="product-name">COVERGIRL & Olay Simply Ageless Instant</h3>
+      <p class="price">$13.00</p>
+      <button class="add-btn">Add to cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/cart4.jpg" alt="Burt’s Bees Shimmer Lip Tint">
+      <h3 class="product-name">Burt’s Bees Shimmer Lip Tint Set, Tinted Lip Balm Stick</h3>
+      <p class="price">$19.00</p>
+      <button class="add-btn">Add to cart</button>
+    </div>
+  </section>
+  <hr style="
+  width: 90%;
+  margin: 60px auto;
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(250, 249, 246, 0.9),
+    transparent
+  );
+  border-radius: 50px;
+  opacity: 0.8;
+">
+  <section class="product-selection">
+    <p class="category-title">PRODUCT CATEGORIES</p>
+    <h1 class="main-title">Product Selection</h1>
+
+    <div class="grid-container">
+      <!-- Beauty Products -->
+      <div class="grid-item">
+        <img src="images/beauty.jpg" alt="Beauty Products">
+        <div class="info">
+          <h3>Beauty Products</h3>
+          <p>Discover our range of high-quality beauty products.</p>
+          <a href="/product.html?category=Beauty Products" style="text-decoration: none; color: inherit;">
+  <button>Shop Now</button>
+</a>
+        </div>
+      </div>
+
+      <!-- Pet Supplies -->
+      <div class="grid-item">
+        <img src="images/pet.jpg" alt="Pet Supplies">
+        <div class="info">
+          <h3>Pet Supplies</h3>
+          <p>Pamper your pets with our premium supplies, from nutritious food to engaging toys and cozy beds.</p>
+          <a href="/product.html?category=Pet Supplies" style="text-decoration: none; color: inherit;">
+  <button>Shop Now</button>
+</a>
+        </div>
+      </div>
+
+      <!-- Home Appliances -->
+      <div class="grid-item">
+        <img src="images/home.jpg" alt="Home Appliances">
+        <div class="info">
+          <h3>Home Appliances</h3>
+          <p>Upgrade your home with our innovative and energy-efficient appliances.</p>
+          <a href="/product.html?category=Home Appliances" style="text-decoration: none; color: inherit;">
+  <button>Shop Now</button>
+</a>
+        </div>
+      </div>
+
+      <!-- Health & Households -->
+      <div class="grid-item">
+        <img src="images/health.jpg" alt="Health & Households">
+        <div class="info">
+          <h3>Health & Households</h3>
+          <p>Find everything you need for a healthy and well-organized home.</p>
+          <a href="/product.html?category=Health & Household" style="text-decoration: none; color: inherit;">
+  <button>Shop Now</button>
+</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="more-products">
+      <a href="product.html" style="text-decoration: none; color: inherit;">
+        <button>More Products</button>
+      </a>
+    </div>
+  </section>
+  <section class="grocery-section">
+    <div class="grocery-overlay"></div>
+    <div class="grocery-content">
+      <h1>Fresh and Convenient Grocery Products</h1>
+      <p>
+        Explore our wide selection of grocery products, from fresh produce to pantry staples.
+        We ensure high quality and freshness in every item, making your grocery shopping convenient
+        and reliable. Stock up on essentials and discover new favorites with Bhairva Inc.
+      </p>
+      <a href="/product.html" class="grocery-btn">Shop Now</a>
+    </div>
+  </section>
+  <hr style="
+  width: 80%;
+  margin: 60px auto;
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 165, 0, 0.9),
+    transparent
+  );
+  border-radius: 50px;
+  opacity: 0.8;
+">
+
+  <section class="features">
+    <div class="feature-box">
+      <img src="images/Product_insurance.png" alt="">
+      <h3>Best Warranty</h3>
+      <p>Enjoy peace of mind with our best-in-class warranty on all products.</p>
+    </div>
+    <div class="feature-box">
+      <img src="images/Exclusive_deal.png" alt="">
+      <h3>Free Shipping</h3>
+      <p>Take advantage of our free shipping on every order, no minimum required.</p>
+    </div>
+    <div class="feature-box">
+      <img src="images/Express_mail_service.png" alt="">
+      <h3>Easy Shopping</h3>
+      <p>Experience hassle-free shopping with our intuitive and user-friendly interface.</p>
+    </div>
+  </section>
+  <hr style="
+  width: 80%;
+  margin: 60px auto;
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 165, 0, 0.9),
+    transparent
+  );
+  border-radius: 50px;
+  opacity: 0.8;
+">
+
+  <section class="gallery">
+    <div class="image-card">
+      <img src="images/shopping-product.jpg" alt="Shopping woman">
+    </div>
+    <div class="image-card">
+      <img src="images/image2.png" alt="Vitamins">
+    </div>
+    <div class="image-card">
+      <img src="images/image3.png" alt="Makeup">
+    </div>
+    <div class="image-card">
+      <img src="images/image4.png" alt="Pet store">
+    </div>
+  </section>
+  <section class="newsletter">
+    <h2>Signup our newsletter to get update about our products, promo, or news</h2>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your email here">
+      <button><i class="fa-solid fa-envelope"></i> Sign Up</button>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column footer-left">
+        <h2>Bhairva Inc</h2>
+        <p class="tagline">Crafting Quality & Innovation</p>
+      </div>
+
+      <div class="footer-column footer-center">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-right">
+        <h3>Contact</h3>
+        <p><i class="fa-solid fa-phone"></i> 716 512 1024</p>
+        <p><i class="fa-solid fa-calendar-days"></i> Mon - Fri, 8:00–22:00</p>
+      </div>
+    </div>
+
+<div class="footer-bottom">
+<p>
+    © 2025 
+    <a href="http://chooseuss.com" target="_blank" style="color: #00bcd4; text-decoration: none; font-weight: 500;">
+      Choose Uss
+    </a>. All Rights Reserved.
+  </p></div>
+  </footer>
+
+
+  <script>
+    const section = document.querySelector('.pet-section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          section.classList.add('show');
+          observer.unobserve(section);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(section);
+  </script>
+  <script>
+    const featureSection = document.querySelector('.features');
+
+    const observer2 = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          featureSection.classList.add('show');
+          observer2.unobserve(featureSection);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer2.observe(featureSection);
+  </script>
+
+
+  <script src="js/script.js"></script>
+  <script src="js/product.js"></script>
+</body>
+
+</html>

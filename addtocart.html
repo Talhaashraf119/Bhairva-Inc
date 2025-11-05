@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhairva Inc</title>
+  <link rel="stylesheet" href="Css/product.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="Css/addtocart.css">
+<link rel="stylesheet" href="Css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="/images/logo.png" alt="SKC Brands Logo" />
+    </div>
+    <nav>
+      <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+  &#9776;
+</div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/index.html" class="active">Home</a></li>
+<li class="dropdown">
+  <a href="/product.html" class="dropbtn">Products ▾</a>
+  <ul class="dropdown-content">
+    <li><a href="/product.html?category=Beauty Products">Beauty Products</a></li><hr>
+    <li><a href="/product.html?category=Health & Households">Health & Households</a></li><hr>
+    <li><a href="/product.html?category=Marine Supplies">Marine Supplies</a></li><hr>
+    <li><a href="/product.html?category=Other Products">Other Products</a></li>
+  </ul>
+</li>
+</li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cart">
+      <span class="cart-total">$0.00</span>
+      <div class="cart-icon" id="cartIcon">🛒<sup id="cart-count">0</sup></div>
+    </div>
+  </div>
+</header>
+
+  <div class="cart-container">
+    <h1>Shopping Cart</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="cart-body"></tbody>
+    </table>
+
+    <div class="cart-buttons">
+      <button class="btn btn-continue" onclick="window.location.href='product.html'">
+        Continue Shopping
+      </button>
+      <button class="btn btn-clear" id="clearCartBtn">Clear All</button>
+    </div>
+
+    <div class="coupon-section">
+      Have a coupon? <a href="#">Click here to enter your code</a>
+    </div>
+
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+      <div><span>Total</span><strong id="total">$0.00</strong></div>
+      <button class="btn btn-checkout">Proceed to checkout</button>
+    </div>
+  </div>
+
+  <section class="newsletter">
+    <h2>Signup our newsletter to get updates about our products, promo, or news</h2>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your email here" />
+      <button><i class="fa-solid fa-envelope"></i> Sign Up</button>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column footer-left">
+        <h2>Bhairva Inc</h2>
+        <p class="tagline">Crafting Quality & Innovation</p>
+      </div>
+
+      <div class="footer-column footer-center">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+            <div class="footer-column footer-right">
+        <h3>Contact</h3>
+        <p><i class="fa-solid fa-phone"></i> 716 512 1024</p>
+        <p><i class="fa-solid fa-calendar-days"></i> Mon - Fri, 8:00–22:00</p>
+      </div>
+    </div>
+
+  <div class="footer-bottom">
+<p>
+    © 2025 
+    <a href="http://chooseuss.com" target="_blank" style="color: #00bcd4; text-decoration: none; font-weight: 500;">
+      Choose Uss
+    </a>. All Rights Reserved.
+  </p></div>
+  </footer>
+
+  <script>
+    // ------------------------------
+    // Navbar Cart Logic
+    // ------------------------------
+    const cartCount = document.getElementById('cart-count');
+    const cartTotal = document.querySelector('.cart-total');
+    const cartBody = document.getElementById('cart-body');
+    const subtotalEl = document.getElementById('subtotal');
+    const totalEl = document.getElementById('total');
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function updateCartIcon() {
+      const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+      const total = cart.reduce(
+        (sum, item) => sum + parseFloat(item.price.replace('$', '')) * (item.quantity || 1),
+        0
+      );
+
+      cartCount.textContent = count;
+      cartTotal.textContent = '$' + total.toFixed(2);
+    }
+
+    document.getElementById('cartIcon').addEventListener('click', () => {
+      window.location.href = 'addtocart.html';
+    });
+
+    // ------------------------------
+    // Render Cart Items
+    // ------------------------------
+    function renderCart() {
+      cartBody.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.quantity * parseFloat(item.price.replace('$', ''));
+        total += itemTotal;
+
+        cartBody.innerHTML += `
+          <tr>
+            <td data-label="Product Name">
+              <div class="product-info">
+                <img src="${item.img}" alt="">
+                <div class="product-name">${item.name}</div>
+              </div>
+            </td>
+            <td data-label="Price">${item.price}</td>
+            <td data-label="Quantity">
+              <div class="qty-box">
+                <button onclick="updateQty(${index}, -1)">-</button>
+                <span>${item.quantity}</span>
+                <button onclick="updateQty(${index}, 1)">+</button>
+              </div>
+            </td>
+            <td data-label="Subtotal">$${itemTotal.toFixed(2)}</td>
+          </tr>
+        `;
+      });
+
+      subtotalEl.textContent = `$${total.toFixed(2)}`;
+      totalEl.textContent = `$${total.toFixed(2)}`;
+      updateCartIcon();
+    }
+
+    // ------------------------------
+    // Quantity Update
+    // ------------------------------
+    function updateQty(index, delta) {
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    // ------------------------------
+    // Clear Cart
+    // ------------------------------
+    document.getElementById('clearCartBtn').addEventListener('click', () => {
+      localStorage.removeItem('cart');
+      cart = [];
+      renderCart();
+    });
+
+    // Initialize
+    renderCart();
+
+    // === FILTER PRODUCTS BASED ON CATEGORY IN URL ===
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get('category');
+
+  if (category) {
+    const title = document.querySelector('.shop-title');
+    title.textContent = category; // Change heading to show category name
+
+    // Hide all products not matching the category
+    document.querySelectorAll('.product-card').forEach(card => {
+      const catText = card.querySelector('.category').textContent.trim();
+      if (catText.toLowerCase() !== category.toLowerCase()) {
+        card.style.display = 'none';
+      } else {
+        card.style.display = 'block';
+      }
+    });
+  }
+});
+
+  </script>
+</body>
+</html>

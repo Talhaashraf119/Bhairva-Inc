@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail-Bhairva Inc</title>
+  <link rel="stylesheet" href="/Css/detailpage.css">
+  <link rel="stylesheet" href="/Css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="/images/logo.png" alt="SKC Brands Logo" />
+    </div>
+    <nav>
+      <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+  &#9776;
+</div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/index.html" class="active">Home</a></li>
+<li class="dropdown">
+  <a href="/product.html" class="dropbtn">Products ▾</a>
+  <ul class="dropdown-content">
+    <li><a href="/product.html?category=Beauty Products">Beauty Products</a></li><hr>
+    <li><a href="/product.html?category=Health & Households">Health & Households</a></li><hr>
+    <li><a href="/product.html?category=Marine Supplies">Marine Supplies</a></li><hr>
+    <li><a href="/product.html?category=Other Products">Other Products</a></li>
+  </ul>
+</li>
+</li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cart">
+      <span class="cart-total">$0.00</span>
+      <div class="cart-icon" id="cartIcon">🛒<sup id="cart-count">0</sup></div>
+    </div>
+  </div>
+</header>
+
+<!-- Product Section -->
+<div class="product-container">
+  <div class="main-image-container">
+    <img id="detail-image" src="" alt="Product Image" class="zoomable-image" />
+  </div>
+
+  <div class="product-details">
+    <h1 id="detail-name"></h1>
+    <p class="price" id="detail-price"></p>
+
+    <div class="add-to-cart-container">
+      <button id="minus" class="quantity-control">-</button>
+      <span id="quantity" class="quantity">1</span>
+      <button id="plus" class="quantity-control">+</button>
+      <button id="add-to-cart-btn" class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="tabs-container">
+      <button class="tab-button active" data-tab="description">Description</button>
+      <button class="tab-button" data-tab="reviews">Reviews</button>
+
+      <div class="tab-content active" id="description">
+        <p>This luxury cream nourishes your skin deeply and enhances your natural glow.</p>
+      </div>
+      <div class="tab-content" id="reviews">
+        <p>No reviews yet. Be the first to review this product!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <div class="faq-container">
+    <div class="faq-left">
+      <h4>FAQs</h4>
+      <h2>Frequently Asked Questions</h2>
+      <p>Find quick answers to common questions about our products, delivery, and more.</p>
+    </div>
+    <div class="faq-right">
+      <div class="faq-item">
+        <button class="faq-question">What is your return policy?</button>
+        <div class="faq-answer"><p>We offer a 7-day easy return policy. Products must be unused and in original packaging.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you offer free shipping?</button>
+        <div class="faq-answer"><p>Yes! We provide free shipping on all orders across Pakistan with no minimum purchase required.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How long does delivery take?</button>
+        <div class="faq-answer"><p>Delivery usually takes 3-5 business days depending on your location.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How can I contact customer support?</button>
+        <div class="faq-answer"><p>You can reach our support team via the “Contact Us” page or by emailing mail.deepasingh@gmail.com</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+  <h2>Signup our newsletter to get update about our products, promo, or news</h2>
+  <div class="newsletter-form">
+    <input type="email" placeholder="Your email here">
+    <button><i class="fa-solid fa-envelope"></i> Sign Up</button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column footer-left">
+        <h2>Bhairva Inc</h2>
+        <p class="tagline">Crafting Quality & Innovation</p>
+      </div>
+
+      <div class="footer-column footer-center">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+            <div class="footer-column footer-right">
+        <h3>Contact</h3>
+        <p><i class="fa-solid fa-phone"></i> 716 512 1024</p>
+        <p><i class="fa-solid fa-calendar-days"></i> Mon - Fri, 8:00–22:00</p>
+      </div>
+    </div>
+
+  <div class="footer-bottom">
+<p>
+    © 2025 
+    <a href="http://chooseuss.com" target="_blank" style="color: #00bcd4; text-decoration: none; font-weight: 500;">
+      Choose Uss
+    </a>. All Rights Reserved.
+  </p></div>
+  </footer>
+<script src="js/script.js"></script>
+<script>
+  // === SHOW SELECTED PRODUCT ===
+  const product = JSON.parse(localStorage.getItem("selectedProduct"));
+  const detailImg = document.getElementById("detail-image");
+  const detailName = document.getElementById("detail-name");
+  const detailPrice = document.getElementById("detail-price");
+
+  if (product) {
+    detailImg.src = product.img;
+    detailName.textContent = product.name;
+    detailPrice.textContent = product.price;
+  } else {
+    window.location.href = "product.html";
+  }
+
+  // === QUANTITY CONTROL ===
+  const minusBtn = document.querySelectorAll(".quantity-control")[0];
+  const plusBtn = document.querySelectorAll(".quantity-control")[1];
+  const quantitySpan = document.querySelector(".quantity");
+  let quantity = 1;
+
+  minusBtn.addEventListener("click", () => {
+    if (quantity > 1) {
+      quantity--;
+      quantitySpan.textContent = quantity;
+    }
+  });
+
+  plusBtn.addEventListener("click", () => {
+    quantity++;
+    quantitySpan.textContent = quantity;
+  });
+
+  // === CART SYSTEM ===
+  const addToCartBtn = document.querySelector(".add-to-cart");
+  const cartIconCount = document.querySelector(".cart-icon sup");
+  const cartPriceTotal = document.querySelector(".cart span");
+
+  function loadCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+  }
+
+  function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+   function updateCartIcon() {
+    const cart = loadCart();
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const total = cart.reduce(
+      (sum, item) => sum + parseFloat(item.price.replace("$", "")) * item.quantity,
+      0
+    );
+    cartIconCount.textContent = count;
+    cartPriceTotal.textContent = `$${total.toFixed(2)}`;
+  }
+
+  addToCartBtn.addEventListener("click", () => {
+    let cart = loadCart();
+
+    const existing = cart.find((item) => item.name === product.name);
+
+    if (existing) {
+      existing.quantity += quantity;
+    } else {
+      cart.push({
+        name: product.name,
+        price: product.price,
+        img: product.img,
+        quantity: quantity,
+      });
+    }
+
+    saveCart(cart);
+    updateCartIcon();
+  });
+
+  // === INITIAL CART ICON UPDATE ===
+  updateCartIcon();
+
+  // === FAQ TOGGLE ===
+  document.querySelectorAll(".faq-question").forEach((button) => {
+    button.addEventListener("click", () => {
+      const faqItem = button.parentElement;
+      faqItem.classList.toggle("active");
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        if (item !== faqItem) item.classList.remove("active");
+      });
+    });
+  });
+// === FILTER PRODUCTS BASED ON CATEGORY IN URL ===
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get('category');
+
+  if (category) {
+    const title = document.querySelector('.shop-title');
+    title.textContent = category; // Change heading to show category name
+
+    // Hide all products not matching the category
+    document.querySelectorAll('.product-card').forEach(card => {
+      const catText = card.querySelector('.category').textContent.trim();
+      if (catText.toLowerCase() !== category.toLowerCase()) {
+        card.style.display = 'none';
+      } else {
+        card.style.display = 'block';
+      }
+    });
+  }
+});
+
+  // === IMAGE ZOOM ===
+</script>
+
+
+</body>
+</html>
